@@ -17,13 +17,13 @@ app.get("/",(req,res)=>{
     res.send("hello wprdas as")
 })
 app.get("/weights",(req,res)=>{
-  res.render("/output",{weight:weight});
+ 
 })
 app.post("/weight",(req,res)=>{
     const weight = req.body.weight;
   console.log(weight);
     // res.send(weight)
-    res.redirect("/weights")
+     res.render("/output",{weight:weight});
 })
 app.listen(port,()=>{
     console.log(`app running  in ${port}`);
