@@ -20,6 +20,7 @@ app.get("/weights",(req,res)=>{
 })
 app.post("/weight",(req,res)=>{
     const weight = req.body.weight;
+  console.log(weight);
     // res.send(weight)
     res.render("output",{weight:weight})
 })
